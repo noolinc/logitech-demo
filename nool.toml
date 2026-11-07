@@ -78,6 +78,14 @@ strict_floats = true
 require_full_paths = []
 hooks = []
 
+[[aram.policies]]
+name = "no_credentials.yaml"
+hash = "4b034a91d4ad0ac5d4ad42ca04d79d326f488092bf115d39f2478080724919c1"
+
+[[aram.policies]]
+name = "test_integrity.yaml"
+hash = "9a0da0d64195bf498df322e4905acc44af65b70ccc77b3e1bc0aad79bf8b768d"
+
 [bridge]
 git_mirror_path = ".nool/git_mirror/"
 sync_on_solidify = true
