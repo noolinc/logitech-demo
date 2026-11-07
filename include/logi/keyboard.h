@@ -3,10 +3,6 @@
 #ifndef LOGI_KEYBOARD_H
 #define LOGI_KEYBOARD_H
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #include <stdint.h>
 
 #include "logi/packet.h"
@@ -20,7 +16,4 @@ uint16_t kb_matrix_scan(uint8_t pattern);
 /* Build a KEYS TLV frame from a 16-bit key bitmap. */
 bool kb_report_frame(logi_frame_t *f, uint8_t seq, uint16_t key_bits);
 
-#ifdef __cplusplus
-}
-#endif
 #endif /* LOGI_KEYBOARD_H */
