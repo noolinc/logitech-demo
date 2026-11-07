@@ -2,6 +2,6 @@ commit_policy_hash: 2e8b563ff1a0f6d478257fc6a82b13ac853a3787b40d0cc00df2893e7522
 commit_policy_version: 1
 commit_template_hash: 686bd6f6d3f60a9716f8ca85195b61c4852e2e6d8a91cf7a01fc867d6252a9af
 intent: nool init: record Nool's configuration files
-knot_id: 13bb7e6f5014729928c9ce7125d52200b8790feea08d844de0ba7a8fdbf50292
-solidified_at: 1794069991048
+knot_id: b93a462e0847790d0c6c841ec8145ba1ef3a769afeb0db59a3da57fea0e855dc
+solidified_at: 1794069991250
 thread: main
