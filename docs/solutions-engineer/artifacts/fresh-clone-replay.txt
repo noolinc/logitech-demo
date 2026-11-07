@@ -1,0 +1,14 @@
+FRESH-CLONE REPLAY PROOF — 2026-11-07 17:33Z
+Arrangement: one origin per repo (the reference production layout).
+Flow: push all refs to a fresh bare origin; fresh git clone; nool pull origin; doctor --fix; audit verify --framework slsa-source-v1.2
+  contracts: Summary: 2 pass, 0 fail, 2 not evaluated, 0 unverifiable, 0 not applicable, 1 out of scope Verdict: INCONCLUSIVE 
+  mcu-protocol: Summary: 2 pass, 0 fail, 2 not evaluated, 0 unverifiable, 0 not applicable, 1 out of scope Verdict: INCONCLUSIVE 
+  hal-core: Summary: 2 pass, 0 fail, 2 not evaluated, 0 unverifiable, 0 not applicable, 1 out of scope Verdict: INCONCLUSIVE 
+  mouse-fw: Summary: 2 pass, 0 fail, 2 not evaluated, 0 unverifiable, 0 not applicable, 1 out of scope Verdict: INCONCLUSIVE 
+  keyboard-fw: Summary: 2 pass, 0 fail, 2 not evaluated, 0 unverifiable, 0 not applicable, 1 out of scope Verdict: INCONCLUSIVE 
+  receiver-fw: Summary: 2 pass, 0 fail, 2 not evaluated, 0 unverifiable, 0 not applicable, 1 out of scope Verdict: INCONCLUSIVE 
+  svc-gateway: Summary: 2 pass, 0 fail, 2 not evaluated, 0 unverifiable, 0 not applicable, 1 out of scope Verdict: INCONCLUSIVE 
+  svc-ota: Summary: 2 pass, 0 fail, 2 not evaluated, 0 unverifiable, 0 not applicable, 1 out of scope Verdict: INCONCLUSIVE 
+  svc-insights: Summary: 2 pass, 0 fail, 2 not evaluated, 0 unverifiable, 0 not applicable, 1 out of scope Verdict: INCONCLUSIVE 
+──
+9 / 9 nodes replay with 0 integrity failures through a full remote roundtrip (git transport only).

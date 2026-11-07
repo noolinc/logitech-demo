@@ -56,13 +56,15 @@ NOOL_AGENT_ID=se-demo-A nool announce release <id from status>
 
 ## Known gaps (announce them BEFORE they surface, see §5 of demo script)
 
-1. **Remotes are wired, hub is not.** All repos now push to
+1. **Remotes are wired, hub is not.** All repos push to
    `https://github.com/noolinc/logitech-demo.git` — root → `main`, each of the
-   9 child repos → `code/<name>` (children use the plain `demo` remote; never
-   run `nool push`/`bridge add-remote` inside a child, or it clobbers root's
-   `main`). Honest caveat: notices/hub rollups still need the hub, and
-   changeset compatibility pins still show `missing` until the hub discharges
-   them — say that before the audience spots it in `changeset show`.
+   9 child repos → `code/<name>` plus their knot/detached metadata refs
+   (children use the plain `demo` remote; never run `nool push`/`bridge
+   add-remote` in a child, or it clobbers root's `main`). Honest caveats:
+   notices/hub rollups still need the hub, changeset pins read `missing` until
+   the hub discharges them, and **full chain replay from the shared remote**
+   needs per-repo origins or the hub (finding `5501aba4`; the 9/9 proof in
+   `artifacts/fresh-clone-replay.txt` documents the working recipe).
 2. **No model providers configured** for `nool code`/fleet runs on this
    machine — that segment is intentionally replayed, not live (kit §5 metrics
    covers the numbers instead).

@@ -1,0 +1,125 @@
+{
+  "since_ms": 1791480489073,
+  "gates": [
+    {
+      "gate": "blast",
+      "evaluations": 19,
+      "blocks": 0,
+      "advisories": 0,
+      "errors": 0,
+      "passes": 19,
+      "landings": 12,
+      "first_run_passes": 12,
+      "first_run_blocks": 0,
+      "first_run_pass_pct": 100.0
+    },
+    {
+      "gate": "budget",
+      "evaluations": 14,
+      "blocks": 0,
+      "advisories": 0,
+      "errors": 0,
+      "passes": 14,
+      "landings": 12,
+      "first_run_passes": 12,
+      "first_run_blocks": 0,
+      "first_run_pass_pct": 100.0
+    },
+    {
+      "gate": "integrity",
+      "evaluations": 4,
+      "blocks": 0,
+      "advisories": 3,
+      "errors": 0,
+      "passes": 1,
+      "landings": 4,
+      "first_run_passes": 1,
+      "first_run_blocks": 0,
+      "first_run_pass_pct": 25.0
+    },
+    {
+      "gate": "lease",
+      "evaluations": 15,
+      "blocks": 1,
+      "advisories": 0,
+      "errors": 0,
+      "passes": 14,
+      "landings": 13,
+      "first_run_passes": 12,
+      "first_run_blocks": 1,
+      "first_run_pass_pct": 92.3076923076923
+    },
+    {
+      "gate": "policy:POL-SECRETS-001",
+      "evaluations": 13,
+      "blocks": 0,
+      "advisories": 0,
+      "errors": 0,
+      "passes": 13,
+      "landings": 10,
+      "first_run_passes": 10,
+      "first_run_blocks": 0,
+      "first_run_pass_pct": 100.0
+    },
+    {
+      "gate": "policy:POL-TESTS-001",
+      "evaluations": 13,
+      "blocks": 0,
+      "advisories": 0,
+      "errors": 0,
+      "passes": 13,
+      "landings": 10,
+      "first_run_passes": 10,
+      "first_run_blocks": 0,
+      "first_run_pass_pct": 100.0
+    },
+    {
+      "gate": "policy:POL-TESTS-002",
+      "evaluations": 13,
+      "blocks": 0,
+      "advisories": 0,
+      "errors": 0,
+      "passes": 13,
+      "landings": 10,
+      "first_run_passes": 10,
+      "first_run_blocks": 0,
+      "first_run_pass_pct": 100.0
+    },
+    {
+      "gate": "precheck",
+      "evaluations": 6,
+      "blocks": 1,
+      "advisories": 0,
+      "errors": 0,
+      "passes": 5,
+      "landings": 4,
+      "first_run_passes": 3,
+      "first_run_blocks": 1,
+      "first_run_pass_pct": 75.0
+    },
+    {
+      "gate": "scope-justification",
+      "evaluations": 7,
+      "blocks": 0,
+      "advisories": 0,
+      "errors": 0,
+      "passes": 7,
+      "landings": 5,
+      "first_run_passes": 5,
+      "first_run_blocks": 0,
+      "first_run_pass_pct": 100.0
+    },
+    {
+      "gate": "workspace_contract",
+      "evaluations": 13,
+      "blocks": 13,
+      "advisories": 0,
+      "errors": 0,
+      "passes": 0,
+      "landings": 10,
+      "first_run_passes": 0,
+      "first_run_blocks": 10,
+      "first_run_pass_pct": 0.0
+    }
+  ]
+}

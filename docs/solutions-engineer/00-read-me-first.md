@@ -14,6 +14,7 @@ Kit contents:
 | [`03-objection-handling.md`](03-objection-handling.md) | Prepared answers to the pushback (git flow inertia, parser false positives, toolchains/HIL, GitLab, token costs) |
 | [`04-environment-prep.md`](04-environment-prep.md) | Machine checklist before you walk in; what to pre-wire; fallback plan |
 | [`05-metrics-and-roi.md`](05-metrics-and-roi.md) | The numbers story: NPI framing, token telemetry, capacity math |
+| [`06-exec-rebuttals-evidence.md`](06-exec-rebuttals-evidence.md) | Rebuttals to the executive hot-read, each backed by evidence generated this week (9/9 replay proof, gate stats, bypass answers) |
 | [`artifacts/`](artifacts/) | Real captured outputs — pairs with the demo script, doubles as "network dies" fallback |
 
 ## The 30-second frame (say this first)
