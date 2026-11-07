@@ -1,7 +1,7 @@
 commit_policy_hash: 2e8b563ff1a0f6d478257fc6a82b13ac853a3787b40d0cc00df2893e7522a5c1
 commit_policy_version: 1
 commit_template_hash: 686bd6f6d3f60a9716f8ca85195b61c4852e2e6d8a91cf7a01fc867d6252a9af
-intent: nool: index 1 discovered features (10 entities) for the entity graph
-knot_id: 2e8768774a33dd916f6da5e05acda024f1e458949e5db4227da3db5608ed8cad
-solidified_at: 1794069996114
-thread: 
+intent: nool init: record Nool's configuration files
+knot_id: c5fa2d2c8b3a77139f07e2288a7f1c3ef5966e500d92d0e84cf6b108eedd3f26
+solidified_at: 1794069996319
+thread: main
