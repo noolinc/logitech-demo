@@ -1,7 +1,7 @@
 commit_policy_hash: 2e8b563ff1a0f6d478257fc6a82b13ac853a3787b40d0cc00df2893e7522a5c1
 commit_policy_version: 1
 commit_template_hash: 686bd6f6d3f60a9716f8ca85195b61c4852e2e6d8a91cf7a01fc867d6252a9af
-intent: nool init: record Nool's configuration files
-knot_id: aade5be0b13ecde2d4088440386274d6e1dba89adec89714ccdf938b4b59f824
-solidified_at: 1794069992612
-thread: main
+intent: Grant editor to 39aa3ee8 over everywhere, valid 365 day(s)
+knot_id: c89a18263d15d03e8e5715bbd756fa1d42f673a1d310af00b65e9a8f8623acdb
+solidified_at: 1794069992776
+thread: 
