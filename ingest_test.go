@@ -20,6 +20,17 @@ func TestValidateTLVsAcceptsKnownTypes(t *testing.T) {
 	}
 }
 
+func TestValidateTLVsAcceptsBatteryHealthTLV(t *testing.T) {
+	// changeset 8da82312: TLV 0x11 is additive to proto v2
+	ev := DeviceEvent{
+		ProtoVer: LogiProtoVer,
+		TLVs:     []TLV{{Type: TLVBatteryHealth, Len: 3}},
+	}
+	if err := ValidateTLVs(ev); err != nil {
+		t.Fatalf("expected ok, got %v", err)
+	}
+}
+
 func TestValidateTLVsRejectsUnknownType(t *testing.T) {
 	ev := DeviceEvent{ProtoVer: LogiProtoVer, TLVs: []TLV{{Type: 0x7F}}}
 	err := ValidateTLVs(ev)

@@ -16,12 +16,13 @@ import (
 type TLVType uint8
 
 const (
-	TLVMotion      TLVType = 0x01
-	TLVKeys        TLVType = 0x02
-	TLVBattery     TLVType = 0x03
-	TLVSensorQC    TLVType = 0x04
-	TLVPairStatus  TLVType = 0x05
-	LogiProtoVer           = 2 // LOGI_PROTO_VERSION mirror
+	TLVMotion        TLVType = 0x01
+	TLVKeys          TLVType = 0x02
+	TLVBattery       TLVType = 0x03
+	TLVSensorQC      TLVType = 0x04
+	TLVPairStatus    TLVType = 0x05
+	TLVBatteryHealth TLVType = 0x11 // additive in proto v2 (changeset 8da82312)
+	LogiProtoVer             = 2    // LOGI_PROTO_VERSION mirror
 )
 
 var ErrUnknownTLV = errors.New("unknown TLV type")
@@ -33,12 +34,12 @@ type TLV struct {
 }
 
 type DeviceEvent struct {
-	DeviceID        string `json:"deviceId"`
-	DeviceType      string `json:"deviceType"`
-	ProtoVer        int    `json:"protoVer"`
-	Seq             int    `json:"seq"`
-	DeviceFirmware  string `json:"firmwareVersion"`
-	TLVs            []TLV  `json:"tlvs"`
+	DeviceID       string `json:"deviceId"`
+	DeviceType     string `json:"deviceType"`
+	ProtoVer       int    `json:"protoVer"`
+	Seq            int    `json:"seq"`
+	DeviceFirmware string `json:"firmwareVersion"`
+	TLVs           []TLV  `json:"tlvs"`
 }
 
 type IngestWindow struct { /* ring of accepted events */
@@ -70,7 +71,7 @@ func ValidateTLVs(ev DeviceEvent) error {
 		return fmt.Errorf("protoVer %d exceeds supported %d", ev.ProtoVer, LogiProtoVer)
 	}
 	for _, t := range ev.TLVs {
-		if t.Type < TLVMotion || t.Type > TLVPairStatus {
+		if t.Type < TLVMotion || (t.Type > TLVPairStatus && t.Type != TLVBatteryHealth) {
 			return fmt.Errorf("%w: 0x%02X", ErrUnknownTLV, byte(t.Type))
 		}
 	}
