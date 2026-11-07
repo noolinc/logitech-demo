@@ -1,0 +1,7 @@
+commit_policy_hash: 2e8b563ff1a0f6d478257fc6a82b13ac853a3787b40d0cc00df2893e7522a5c1
+commit_policy_version: 1
+commit_template_hash: 686bd6f6d3f60a9716f8ca85195b61c4852e2e6d8a91cf7a01fc867d6252a9af
+intent: Create task: Battery-health telemetry: report pack cycles and temperature over the 2.4GHz link (TLV 0x11, additive to proto v2)
+knot_id: 04ed00a9efa7efba6252d0fad3293ba3c09701fd19636a71b3d2ae41592c3b6f
+solidified_at: 1794070083302
+thread: 
