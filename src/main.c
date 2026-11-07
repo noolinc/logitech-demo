@@ -43,6 +43,14 @@ int mouse_main(int ticks) {
             sensor.dy_acc = 0;
             sensor.motion = false;
         }
+        /* battery-health telemetry: every 5 ticks (changeset incl. cloud) */
+        if (t % 5 == 4) {
+            logi_frame_t f;
+            if (mouse_batt_health_frame(&f, (uint8_t)hal_radio_tx_count()) &&
+                hal_radio_send(f.buf, f.len)) {
+                sent++;
+            }
+        }
         (void)pins;
         (void)link_led;
     }

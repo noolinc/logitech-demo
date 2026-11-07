@@ -21,14 +21,22 @@ static void test_buttons_and_end_to_end(void) {
         (const uint8_t[]){BTN_HELD, BTN_IDLE, BTN_PRESSED});
     assert(bits == (MOUSE_BTN_LEFT | MOUSE_BTN_MIDDLE));
 
+    /* battery-health frame carries TLV 0x11 with 3-byte pack data */
+    logi_frame_t f;
+    assert(mouse_batt_health_frame(&f, 4));
+    const uint8_t *pl;
+    uint8_t plen;
+    assert(logi_frame_parse(f.buf, f.len, NULL, NULL, &pl, &plen));
+    size_t at = logi_tlv_find(pl, plen, TLV_BATTERY_HEALTH, &pl, &plen);
+    assert(at == 0 && plen == 3 && pl[0] == hal_battery_percent());
+
     /* end-to-end: firmware main loop sends frames on the radio */
     assert(mouse_main(4) >= 1);
     const uint8_t *tx = hal_radio_last_buf();
     uint8_t n = hal_radio_last_len();
     assert(n > 0);
     assert(tx[0] == LOGI_SYNC0 && tx[1] == LOGI_SYNC1);
-    uint8_t ver, seq, plen;
-    const uint8_t *pl;
+    uint8_t ver, seq;
     assert(logi_frame_parse(tx, n, &ver, &seq, &pl, &plen));
 }
 
