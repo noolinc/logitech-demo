@@ -2,7 +2,7 @@ aram_policy_set: 0bb174817e2b3cae98d37e488b4a30c00a65c74f9fc263aa991bd25cafb7f9c
 commit_policy_hash: 2e8b563ff1a0f6d478257fc6a82b13ac853a3787b40d0cc00df2893e7522a5c1
 commit_policy_version: 1
 commit_template_hash: 686bd6f6d3f60a9716f8ca85195b61c4852e2e6d8a91cf7a01fc867d6252a9af
-intent: Finish task 7450e932 (landed c1b85ff0)
-knot_id: ffb4eace6fc36b92b2fd280999148398a9bf4c0b74ac3e2155c4690af211a60d
-solidified_at: 1794070487994
+intent: Release: 0.2.0
+knot_id: bc22d60a86c290369c1ec821d1bdcbe91413c2faa0fcb5d5d7d3e45255815204
+solidified_at: 1794070609845
 thread: 
