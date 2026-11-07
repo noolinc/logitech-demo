@@ -1,7 +1,7 @@
 commit_policy_hash: 2e8b563ff1a0f6d478257fc6a82b13ac853a3787b40d0cc00df2893e7522a5c1
 commit_policy_version: 1
 commit_template_hash: 686bd6f6d3f60a9716f8ca85195b61c4852e2e6d8a91cf7a01fc867d6252a9af
-intent: Grant editor to 39aa3ee8 over everywhere, valid 365 day(s)
-knot_id: 2ac80b2f45fc60351488040ffb19741cc6ea55ba8f12761337ae2572dd3d0b9a
-solidified_at: 1794069991424
-thread: 
+intent: Governed setup: unmet proof obligations block a push
+knot_id: 26877e4e1bb80117807656b10c7341f2ceef3c2986166942be318052b2eb4efc
+solidified_at: 1794069991708
+thread: main
