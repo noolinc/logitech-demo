@@ -2,7 +2,7 @@ aram_policy_set: 0bb174817e2b3cae98d37e488b4a30c00a65c74f9fc263aa991bd25cafb7f9c
 commit_policy_hash: 2e8b563ff1a0f6d478257fc6a82b13ac853a3787b40d0cc00df2893e7522a5c1
 commit_policy_version: 1
 commit_template_hash: 686bd6f6d3f60a9716f8ca85195b61c4852e2e6d8a91cf7a01fc867d6252a9af
-intent: Create task: extend logi/proto.h with TLV_BATTERY_HEALTH (0x11) + schema note
-knot_id: 915432b0a99194e228caf9dbc1b7ca08b1359c048049aa8ec84a86c460091e45
-solidified_at: 1794070083403
+intent: Claim task 915432b0
+knot_id: adf56413a4a9953f13bcf2cc2e813d287e2e107b60f93be7614c2a8005ef54c5
+solidified_at: 1794070102211
 thread: 
