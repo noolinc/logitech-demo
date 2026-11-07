@@ -7,10 +7,6 @@
 #ifndef LOGI_PACKET_H
 #define LOGI_PACKET_H
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
@@ -41,7 +37,4 @@ size_t logi_tlv_find(const uint8_t *payload, uint8_t plen, uint8_t type,
 
 uint8_t logi_crc8(const uint8_t *data, size_t len);
 
-#ifdef __cplusplus
-}
-#endif
 #endif /* LOGI_PACKET_H */

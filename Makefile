@@ -1,10 +1,13 @@
 CC ?= cc
-CFLAGS := -std=c11 -Wall -Wextra -O2 -Iinclude -I../contracts/include
+CFLAGS := -std=c11 -Wall -Wextra -O2 -Iinclude -Ivendor/contracts/include
 
 SRC := src/packet.c
 
 test: bin/test_packet
 	./bin/test_packet
+
+vendor:
+	./refresh-vendor.sh
 
 bin:
 	mkdir -p bin
