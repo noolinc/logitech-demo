@@ -2,7 +2,7 @@ aram_policy_set: 0bb174817e2b3cae98d37e488b4a30c00a65c74f9fc263aa991bd25cafb7f9c
 commit_policy_hash: 2e8b563ff1a0f6d478257fc6a82b13ac853a3787b40d0cc00df2893e7522a5c1
 commit_policy_version: 1
 commit_template_hash: 686bd6f6d3f60a9716f8ca85195b61c4852e2e6d8a91cf7a01fc867d6252a9af
-intent: Assert: entity:include/logi/proto.h:383166c3bfd9652b avoids extern-c-guards
-knot_id: 6da27e616dd362fc84556a3e017fee739f5ac02988c24565950a62369c668d20
-solidified_at: 1794070266568
-thread: 
+intent: Battery-health telemetry: add TLV_BATTERY_HEALTH 0x11; headers extern-C-free per assertion 94195abf
+knot_id: 066348e7f9e77f36e624a6281f2ca6d95a64e9910ad10d3427cf462bd8ca1708
+solidified_at: 1794070273134
+thread: main

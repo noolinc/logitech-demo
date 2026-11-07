@@ -17,7 +17,7 @@
         "type": "object",
         "required": ["type"],
         "properties": {
-          "type": { "type": "integer", "description": "TLV id, mirror of enum logi_tlv_type in proto.h" },
+          "type": { "type": "integer", "description": "TLV id, mirror of enum logi_tlv_type in proto.h; 0x11 = TLV_BATTERY_HEALTH (additive in proto v2, receivers must tolerate unknown ids)" },
           "len": { "type": "integer" },
           "value": { "type": "string", "contentEncoding": "base64", "description": "TLV value bytes base64" }
         }

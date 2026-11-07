@@ -17,10 +17,6 @@
 #ifndef LOGI_PROTO_H
 #define LOGI_PROTO_H
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #include <stdint.h>
 
 #define LOGI_PROTO_VERSION  2        /* wire protocol version */
@@ -37,6 +33,7 @@ enum logi_tlv_type {
     TLV_BATTERY       = 0x03,   /* 1B: percent */
     TLV_SENSOR_QC     = 0x04,   /* 1B: quality code */
     TLV_PAIR_STATUS   = 0x05,   /* 1B: pairing state */
+    TLV_BATTERY_HEALTH = 0x11,  /* 3B: pct, cycles, temp_c, additive to v2 */
     TLV_PROTO_MIN     = 0x01,
     TLV_PROTO_MAX     = 0x05
 };
@@ -47,7 +44,4 @@ enum logi_battery {
     LOGI_BATT_CRITICAL_PCT = 5
 };
 
-#ifdef __cplusplus
-}
-#endif
 #endif /* LOGI_PROTO_H */
