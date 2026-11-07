@@ -2,7 +2,7 @@ aram_policy_set: 0bb174817e2b3cae98d37e488b4a30c00a65c74f9fc263aa991bd25cafb7f9c
 commit_policy_hash: 2e8b563ff1a0f6d478257fc6a82b13ac853a3787b40d0cc00df2893e7522a5c1
 commit_policy_version: 1
 commit_template_hash: 686bd6f6d3f60a9716f8ca85195b61c4852e2e6d8a91cf7a01fc867d6252a9af
-intent: nool workspace plumbing: hooks, ignore patterns, gitattributes
-knot_id: 39b7f6a37af4cf05037034183674d654226a03006725c34ec94f96c95c0e43fb
-solidified_at: 1794070067625
-thread: main
+intent: Create task: extend logi/proto.h with TLV_BATTERY_HEALTH (0x11) + schema note
+knot_id: 915432b0a99194e228caf9dbc1b7ca08b1359c048049aa8ec84a86c460091e45
+solidified_at: 1794070083403
+thread: 
