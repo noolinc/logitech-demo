@@ -11,6 +11,17 @@ multi-repo software organization under the **Nool 7.25.0** semantic-agentic VCS
 > Logitech's public engineering statements, objection handling, and machine
 > prep. This README remains the technical deep-dive.
 
+> **Remote layout** (`https://github.com/noolinc/logitech-demo.git`):
+> `main` = the workspace root (this README, the SE kit, `workspace.toml`, and
+> the root ledger under `.nool/`); one branch per org member,
+> `code/<repo-name>` (e.g. [`code/contracts`](https://github.com/noolinc/logitech-demo/tree/code/contracts),
+> [`code/mouse-fw`](https://github.com/noolinc/logitech-demo/tree/code/mouse-fw)),
+> holding each repo's tip including its own `.nool/` ledger and knot refs
+> (`refs/nool/*` were pushed to `main` alongside it). The workspace root and
+> the code branches are independent git histories on purpose — nool is one
+> workspace, not one repo; each node governs itself and the root ledger
+> stitches them together.
+
 Logitech in one line: design-led, **software-enabled hardware** for work and
 play — gaming (Logitech G), keyboards/mice (pointing devices), video
 collaboration (Rally Bar family, MeetUp, Sight, Tap), webcams (Brio, C920),
@@ -166,17 +177,21 @@ Recorded **live** during this exercise — these are the agents' guardrails:
    B/85, mouse-fw A/95, svc-gateway A/95, then workspace rollup
    RELEASABLE_WITH_WARNINGS across all 9).
 
-## 5. What needs remotes / hub (wired per repo in production)
+## 5. What needs remotes / hub (partially wired — see gap notes)
 
-The local sim has **no git remotes configured**, so these flows stand idle:
+The workspace is now mirrored to `https://github.com/noolinc/logitech-demo.git`
+(root → `main`, each child → `code/<name>`), but flow discharge still needs the
+hub:
 
 - **Notices** (`notice list|reply|process`, auto-task on contract changes)
   ride push/pull or the hub; once each repo syncs to `origin`, contract-type
   lands (contracts pushing its `066348e7`) arrive in mcu-protocol/svc-gateway
   with lint-pin integration — then `notice process` offers to run auto-fix
   sessions (`on_notice = auto_fix`).
-- **Manifest pins & obligations** in the changeset (`compatible-with: missing`)
-  discharge after `nool workspace sync --once` across remotes.
+- **Manifest pins & obligations** in the changeset (`compatible-with: missing`
+  in `artifacts/changeset-show.txt`) did **not** discharge from remotes alone —
+  they need notice delivery via the hub (`nool workspace sync --once` against
+  an estate where every node's origin is live).
 - **Hub org-rollup functions** (`workspace status --hub`, `query search --scope org`,
   approval routes) read through `nool-hub-server` when OAC/OIDC wiring exists
   (Team/Enterprise).

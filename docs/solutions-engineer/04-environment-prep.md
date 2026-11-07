@@ -56,10 +56,13 @@ NOOL_AGENT_ID=se-demo-A nool announce release <id from status>
 
 ## Known gaps (announce them BEFORE they surface, see §5 of demo script)
 
-1. **No git remotes.** Notice delivery, changeset compatibility-pin discharge,
-   and hub rollups want per-repo `origin`s or the hub. Mention once: "in your
-   estate every repo already has origin; the workspace syncs in dependency
-   order (`nool workspace sync --once`)."
+1. **Remotes are wired, hub is not.** All repos now push to
+   `https://github.com/noolinc/logitech-demo.git` — root → `main`, each of the
+   9 child repos → `code/<name>` (children use the plain `demo` remote; never
+   run `nool push`/`bridge add-remote` inside a child, or it clobbers root's
+   `main`). Honest caveat: notices/hub rollups still need the hub, and
+   changeset compatibility pins still show `missing` until the hub discharges
+   them — say that before the audience spots it in `changeset show`.
 2. **No model providers configured** for `nool code`/fleet runs on this
    machine — that segment is intentionally replayed, not live (kit §5 metrics
    covers the numbers instead).
