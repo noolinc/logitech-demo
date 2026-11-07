@@ -1,0 +1,34 @@
+Causal Chain for 066348e7f9e77f36e624a6281f2ca6d95a64e9910ad10d3427cf462bd8ca1708
+══════════════════════════════════════════════════
+      └─ 066348e7 [2026-11-07 16:51:12 UTC] Synthesis (2 props):
+  - Mutation  contract  @ include/logi/proto.h
+  - Mutation  @ schemas/device-event.schema.json
+           ↳ Battery-health telemetry: add TLV_BATTERY_HEALTH 0x11; headers extern-C-free per assertion 94195abf
+             intent/diff overlap: 45% [advisory]
+           ✓ compile pass (check) by integrity-driver
+           ✓ unit-tests pass (full) by integrity-driver
+           ? tests_constrain_change error (check) by mutation-probe
+        └─ 6da27e61 [2026-11-07 16:51:00 UTC] Assertion 94195abf avoids extern-c-guards
+             ↳ Assert: entity:include/logi/proto.h:383166c3bfd9652b avoids extern-c-guards
+          └─ 6e286474 [2026-11-07 16:48:22 UTC] Task:Rails 915432b0 [fuzz/, Makefile, tests/]
+               ↳ Edit task 915432b0: rails fuzz/, Makefile, tests/
+            └─ ac64ca9c [2026-11-07 16:48:22 UTC] Task:Pick
+                 ↳ Claim task 915432b0
+              └─ 493aa7f2 [2026-11-07 16:48:22 UTC] Task:Start
+                   ↳ Start task 915432b0
+                └─ adf56413 [2026-11-07 16:48:22 UTC] Task:Pick
+                     ↳ Claim task 915432b0
+                  └─ 915432b0 [2026-11-07 16:48:03 UTC] Task:Create   extend logi/proto.h with TLV_BATTERY_HEALTH (0x11) + schema note
+                       ↳ Create task: extend logi/proto.h with TLV_BATTERY_HEALTH (0x11) + schema note
+                    └─ 39b7f6a3 [2026-11-07 16:47:47 UTC] Synthesis (4 props):
+  - Mutation  config  @ .claude/settings.json
+  - Mutation  @ .gitattributes
+  - Mutation  @ .gitignore
+  - Mutation  @ .noolignore
+                         ↳ nool workspace plumbing: hooks, ignore patterns, gitattributes
+                           intent/diff overlap: 28% [advisory]
+                         ? compile error (check) by integrity-driver
+                         ? unit-tests error (full) by integrity-driver
+                  └─ 915432b0 (…)
+                └─ 915432b0 (…)
+              └─ 915432b0 (…)

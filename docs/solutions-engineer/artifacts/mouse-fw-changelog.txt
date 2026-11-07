@@ -1,0 +1,60 @@
+# Semantic Changelog
+
+## Uncategorized
+- Synthesis: **8** operations  _2026-11-07 16:46:14 UTC_
+- Synthesis: **30** operations  _2026-11-07 16:46:30 UTC_
+- Attestation: **Pass** `syntax` by `integrity-driver` for `b93a462e`  _2026-11-07 16:46:31 UTC_
+- Grant     editor to 39aa3ee8  _2026-11-07 16:46:31 UTC_
+- Attestation: **Error** `unit-tests` by `integrity-driver` for `26877e4e`  _2026-11-07 16:46:31 UTC_
+- Attestation: **Error** `compile` by `integrity-driver` for `26877e4e`  _2026-11-07 16:46:31 UTC_
+- Attestation: **Error** `compile` by `integrity-driver` for `716f4897`  _2026-11-07 16:46:32 UTC_
+- Attestation: **Error** `unit-tests` by `integrity-driver` for `716f4897`  _2026-11-07 16:46:32 UTC_
+- Task: **Created** `emit periodic battery-health TLV from the mouse superloop`  _2026-11-07 16:48:03 UTC_
+- Receipt   pre-solidify gate passed (3 policies) for d702c536 (legacy: no destination)  _2026-11-07 16:48:03 UTC_
+- Task: **Picked**  _2026-11-07 16:51:56 UTC_
+- Receipt   pre-solidify gate passed (3 policies) for 63385270 (legacy: no destination)  _2026-11-07 16:51:56 UTC_
+- Task: **Started**  _2026-11-07 16:51:57 UTC_
+- Receipt   pre-solidify gate passed (3 policies) for 1619233a (legacy: no destination)  _2026-11-07 16:51:57 UTC_
+- Finding: **dead_end** about `include/logi/mouse.h`  _2026-11-07 16:52:36 UTC_
+- Finding: **dead_end** about `src/motion.c`  _2026-11-07 16:52:36 UTC_
+- Finding: **dead_end** about `src/main.c`  _2026-11-07 16:52:36 UTC_
+- Finding: **dead_end** about `tests/test_smoke.c`  _2026-11-07 16:52:36 UTC_
+- Finding: **dead_end** about `include/logi/mouse.h`  _2026-11-07 16:52:54 UTC_
+- Finding: **dead_end** about `src/motion.c`  _2026-11-07 16:52:54 UTC_
+- Finding: **dead_end** about `src/main.c`  _2026-11-07 16:52:54 UTC_
+- Finding: **dead_end** about `tests/test_smoke.c`  _2026-11-07 16:52:54 UTC_
+- Finding: **dead_end** about `include/logi/mouse.h`  _2026-11-07 16:53:07 UTC_
+- Finding: **dead_end** about `src/motion.c`  _2026-11-07 16:53:07 UTC_
+- Finding: **dead_end** about `src/main.c`  _2026-11-07 16:53:07 UTC_
+- Finding: **dead_end** about `tests/test_smoke.c`  _2026-11-07 16:53:07 UTC_
+- Finding: **dead_end** about `include/logi/mouse.h`  _2026-11-07 16:54:03 UTC_
+- Finding: **dead_end** about `src/motion.c`  _2026-11-07 16:54:03 UTC_
+- Finding: **dead_end** about `src/main.c`  _2026-11-07 16:54:03 UTC_
+- Finding: **dead_end** about `tests/test_smoke.c`  _2026-11-07 16:54:03 UTC_
+- Finding: **dead_end** about `refresh-vendor.sh`  _2026-11-07 16:54:03 UTC_
+- Finding: **dead_end** about `vendor/contracts/include/logi/proto.h`  _2026-11-07 16:54:03 UTC_
+- Finding: **dead_end** about `vendor/hal-core/include/logi/hal.h`  _2026-11-07 16:54:03 UTC_
+- Finding: **dead_end** about `vendor/hal-core/src/battery_mock.c`  _2026-11-07 16:54:03 UTC_
+- Receipt   pre-solidify gate passed (3 policies) for 8d5123f9 (legacy: no destination)  _2026-11-07 16:54:13 UTC_
+- Attestation: **Error** `tests_constrain_change` by `mutation-probe` for `8d5123f9`  _2026-11-07 16:54:13 UTC_
+- Attestation: **Pass** `compile` by `integrity-driver` for `8d5123f9`  _2026-11-07 16:54:13 UTC_
+- Attestation: **Pass** `unit-tests` by `integrity-driver` for `8d5123f9`  _2026-11-07 16:54:13 UTC_
+- Task: **Finished** (landed `8d5123f97a65a1bc259d65c36a0b007b41ebb7b2180756204b62eba8d5935cbf`)  _2026-11-07 16:54:47 UTC_
+- Receipt   pre-solidify gate passed (3 policies) for c5d27810 (legacy: no destination)  _2026-11-07 16:54:47 UTC_
+- Release: **0.2.0**  _2026-11-07 16:56:49 UTC_
+- Receipt   pre-solidify gate passed (3 policies) for 56119783 (legacy: no destination)  _2026-11-07 16:56:49 UTC_
+- Receipt   pre-solidify gate passed (3 policies) for 975361e3 (legacy: no destination)  _2026-11-07 16:56:55 UTC_
+- Receipt   pre-solidify gate passed (3 policies) for b9ab84cb (legacy: no destination)  _2026-11-07 16:56:55 UTC_
+- Finding: **finding** about `nool-agent-identity-fencing`  _2026-11-07 16:57:12 UTC_
+
+## main
+- **config** on `nool.toml`  _2026-11-07 16:46:30 UTC_
+- Synthesis: **4** operations  _2026-11-07 16:46:31 UTC_
+- **config** on `nool.toml`  _2026-11-07 16:46:31 UTC_
+- Synthesis: **3** operations  _2026-11-07 16:46:31 UTC_
+- Synthesis: **16** operations  _2026-11-07 16:54:11 UTC_
+
+## ship-battery-health-telemetry-end-to-end
+- Thread    ship-battery-health-telemetry-end-to-end created  _2026-11-07 16:56:55 UTC_
+- Task: **Created** `document the 5-tick battery schedule`  _2026-11-07 16:56:55 UTC_
+

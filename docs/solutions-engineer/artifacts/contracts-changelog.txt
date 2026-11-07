@@ -1,0 +1,44 @@
+# Semantic Changelog
+
+## Uncategorized
+- Synthesis: **7** operations  _2026-11-07 16:46:14 UTC_
+- Synthesis: **9** operations  _2026-11-07 16:46:18 UTC_
+- Receipt   pre-propose gate refused a proposal (reason 403) (0 policies) (legacy: no destination)  _2026-11-07 16:46:19 UTC_
+- Grant     editor to 39aa3ee8  _2026-11-07 16:46:19 UTC_
+- Attestation: **Error** `unit-tests` by `integrity-driver` for `0fd796af`  _2026-11-07 16:46:20 UTC_
+- Attestation: **Error** `compile` by `integrity-driver` for `0fd796af`  _2026-11-07 16:46:20 UTC_
+- Attestation: **Error** `compile` by `integrity-driver` for `ce3bb1fa`  _2026-11-07 16:46:21 UTC_
+- Attestation: **Error** `unit-tests` by `integrity-driver` for `ce3bb1fa`  _2026-11-07 16:46:21 UTC_
+- Receipt   pre-solidify gate passed (3 policies) for 39b7f6a3 (legacy: no destination)  _2026-11-07 16:47:47 UTC_
+- Attestation: **Error** `unit-tests` by `integrity-driver` for `39b7f6a3`  _2026-11-07 16:47:47 UTC_
+- Attestation: **Error** `compile` by `integrity-driver` for `39b7f6a3`  _2026-11-07 16:47:47 UTC_
+- Task: **Created** `extend logi/proto.h with TLV_BATTERY_HEALTH (0x11) + schema note`  _2026-11-07 16:48:03 UTC_
+- Receipt   pre-solidify gate passed (3 policies) for 915432b0 (legacy: no destination)  _2026-11-07 16:48:03 UTC_
+- Task: **Picked**  _2026-11-07 16:48:22 UTC_
+- Receipt   pre-solidify gate passed (3 policies) for adf56413 (legacy: no destination)  _2026-11-07 16:48:22 UTC_
+- Task: **Started**  _2026-11-07 16:48:22 UTC_
+- Task: **Picked**  _2026-11-07 16:48:22 UTC_
+- Task: **Rails set** `fuzz/`, `Makefile`, `tests/`  _2026-11-07 16:48:22 UTC_
+- Receipt   pre-solidify gate passed (3 policies) for 493aa7f2 (legacy: no destination)  _2026-11-07 16:48:22 UTC_
+- Finding: **root_cause** about `nool-c-parser-extern-c-guards`  _2026-11-07 16:50:49 UTC_
+- Assertion: `94195abf` **avoids** `extern-c-guards`  _2026-11-07 16:51:00 UTC_
+- Receipt   pre-solidify gate passed (3 policies) for ac64ca9c (legacy: no destination)  _2026-11-07 16:51:00 UTC_
+- Receipt   pre-solidify gate passed (3 policies) for 6e286474 (legacy: no destination)  _2026-11-07 16:51:06 UTC_
+- Receipt   pre-solidify gate passed (3 policies) for 6da27e61 (legacy: no destination)  _2026-11-07 16:51:06 UTC_
+- Attestation: **Error** `tests_constrain_change` by `mutation-probe` for `066348e7`  _2026-11-07 16:51:13 UTC_
+- Receipt   pre-solidify gate passed (3 policies) for 066348e7 (legacy: no destination)  _2026-11-07 16:51:13 UTC_
+- Attestation: **Pass** `unit-tests` by `integrity-driver` for `066348e7`  _2026-11-07 16:51:13 UTC_
+- Attestation: **Pass** `compile` by `integrity-driver` for `066348e7`  _2026-11-07 16:51:13 UTC_
+- Task: **Started**  _2026-11-07 16:54:57 UTC_
+- Receipt   pre-solidify gate passed (3 policies) for 0668c62e (legacy: no destination)  _2026-11-07 16:54:57 UTC_
+- Task: **Finished** (landed `066348e7f9e77f36e624a6281f2ca6d95a64e9910ad10d3427cf462bd8ca1708`)  _2026-11-07 16:54:57 UTC_
+- Receipt   pre-solidify gate passed (3 policies) for 08824313 (legacy: no destination)  _2026-11-07 16:54:57 UTC_
+- Release: **0.2.0**  _2026-11-07 16:56:44 UTC_
+- Receipt   pre-solidify gate passed (3 policies) for 8ce1b5e1 (legacy: no destination)  _2026-11-07 16:56:44 UTC_
+
+## main
+- **config** on `nool.toml`  _2026-11-07 16:46:20 UTC_
+- Synthesis: **3** operations  _2026-11-07 16:46:20 UTC_
+- Synthesis: **4** operations  _2026-11-07 16:47:47 UTC_
+- Synthesis: **2** operations  _2026-11-07 16:51:12 UTC_
+

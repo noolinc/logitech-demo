@@ -1,0 +1,63 @@
+  [Reify] ⏱  check timeout 120s (default floor (3x the last successful check (1s) is less); override with NOOL_INTEGRITY_TIMEOUT_SECS)
+
+Nool Repository Health Check
+════════════════════════════════════════════════════════════
+Status: ⚠️  RELEASABLE_WITH_WARNINGS
+Health Grade: A (95/100 -- 0 error(s), 1 warning(s))
+Build         : v7.25.0 (2f5b688c76859e63ca5ba73842dc52445a530acd, rustc 1.95.0 (59807616e 2026-04-14), aarch64-apple-darwin)
+
+[1] Semantic Integrity
+────────────────────────────────────────
+  DAG Head          : 8ce1b5e1
+  Latest Release    : 0.2.0
+  Active Threads    : 1
+  Pending Proposals : 0
+  ✓ No trusted issuer is configured ([governance] issuer_keys, a licence with organisation keys, or a workspace's [workspace.governance]): admin authority is open, and grants are recorded but not enforced
+  ✓ No stale, unlinked tasks found
+  ✓ DAG head is stable
+  ✓ No pending proposals
+  ✓ 1 thread(s) are not released or archived; `nool thread status --name <thread> --status released` closes one
+  ✓ Latest checkpoint '0.2.0' is at the DAG head
+
+[2] Filesystem Hygiene
+────────────────────────────────────────
+  ✓ Git worktree is clean
+
+[3] Aram Gates (doctor stage)
+────────────────────────────────────────
+  ⚠️ [GATE_FIRST_RUN_LOW] workspace_contract passed only 0% of 10 changes the first time it ran on them in the last 30 days (13 blocks)
+
+[4] Model Bindings
+────────────────────────────────────────
+  pre-propose    : no dispatch
+    fallback trail: (zero-config)
+  post-propose   : no dispatch
+    fallback trail: (zero-config)
+  pre-solidify   : no dispatch
+    fallback trail: (zero-config)
+  pre-push       : no dispatch
+    fallback trail: (zero-config)
+  doctor         : no dispatch
+    fallback trail: (zero-config)
+
+[5] Orchestrator
+────────────────────────────────────────
+  ✓ claudesdk    ready
+  ✓ codex        ready
+  ✓ gemini       ready
+  ✓ copilot      ready
+  ✓ ollama       ready
+  ✓ deepseek     ready
+  ✓ openrouter   ready
+  ✓ host         ready (in-process fallback)
+  ✓ no single-vendor veto consortium configured (§13.2)
+
+[6] Required Fixes
+────────────────────────────────────────
+  • Rerun `nool doctor` before release
+  • See `nool policy stats --gate workspace_contract`; state the rule where agents read it (the playbook, AGENTS.md, the policy's message) or revisit it
+
+
+Commit Template
+────────────────────────────────────────
+  ✓ valid · built-in Nool template

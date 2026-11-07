@@ -1,0 +1,72 @@
+Workspace: /Users/arunbalakrishnan/Research/logitech  (9 projects across 2 levels)  owner: arun@nool.dev
+
+STRUCTURE
+  ▸ cloud (3 projects)  owner: arun@nool.dev (inherited)
+    ● svc-gateway        cloud/svc-gateway            main@origin  owner: arun@nool.dev (inherited)
+    ● svc-insights       cloud/svc-insights           main@origin  owner: arun@nool.dev (inherited)
+    ● svc-ota            cloud/svc-ota                main@origin  owner: arun@nool.dev (inherited)
+  ▸ devices (3 projects)  owner: arun@nool.dev (inherited)
+    ● keyboard-fw        devices/keyboard-fw          main@origin  owner: arun@nool.dev (inherited)
+    ● mouse-fw           devices/mouse-fw             main@origin  owner: arun@nool.dev (inherited)
+    ● receiver-fw        devices/receiver-fw          main@origin  owner: arun@nool.dev (inherited)
+  ▸ platform (3 projects)  owner: arun@nool.dev (inherited)
+    ● contracts          platform/contracts           main@origin  owner: arun@nool.dev (inherited)
+    ● hal-core           platform/hal-core            main@origin  owner: arun@nool.dev (inherited)
+    ● mcu-protocol       platform/mcu-protocol        main@origin  owner: arun@nool.dev (inherited)
+
+HEALTH (nool doctor, rolled up worst-of)
+  ▸ cloud
+    svc-gateway        ⚠️  RELEASABLE_WITH_WARNINGS
+    svc-insights       ⚠️  RELEASABLE_WITH_WARNINGS
+    svc-ota            ⚠️  RELEASABLE_WITH_WARNINGS
+    └ ⚠️  RELEASABLE_WITH_WARNINGS
+  ▸ devices
+    keyboard-fw        ⚠️  RELEASABLE_WITH_WARNINGS
+    mouse-fw           ⚠️  RELEASABLE_WITH_WARNINGS
+    receiver-fw        ⚠️  RELEASABLE_WITH_WARNINGS
+    └ ⚠️  RELEASABLE_WITH_WARNINGS
+  ▸ platform
+    contracts          ⚠️  RELEASABLE_WITH_WARNINGS
+    hal-core           ⚠️  RELEASABLE_WITH_WARNINGS
+    mcu-protocol       ⚠️  RELEASABLE_WITH_WARNINGS
+    └ ⚠️  RELEASABLE_WITH_WARNINGS
+  Rollup: ⚠️  RELEASABLE_WITH_WARNINGS
+
+DEPENDENCY EDGES (root level)
+  mouse-fw ──Build──▶ mcu-protocol
+  keyboard-fw ──Build──▶ mcu-protocol
+  receiver-fw ──Build──▶ mcu-protocol
+  mcu-protocol ──Contract──▶ contracts
+  hal-core ──Build──▶ contracts
+  svc-gateway ──Contract──▶ contracts
+  svc-ota ──Release──▶ mouse-fw
+  svc-insights ──Build──▶ svc-gateway
+
+BUILD / RELEASE ORDER (root level)
+  1. contracts
+  2. mcu-protocol
+  3. svc-gateway
+  4. hal-core
+  5. keyboard-fw
+  6. mouse-fw
+  7. receiver-fw
+  8. svc-insights
+  9. svc-ota
+
+MANIFEST
+  (none — `nool workspace manifest advance` seals the first)
+
+CHANGESETS
+  changeset:8da82312c254d981  Open  Battery-health telemetry: report pack cycles and temperature over the 2.4GHz link (TLV 0x11, additive to proto v2)
+    contracts      Attested   knot 066348e7
+    mouse-fw       Landed     knot 8d5123f9
+      compatible-with:da861305c27ac4b78a70b8de6b743a3500658909@a4f0c2563bbf37005db4a9fe894a2ed829271f4a96a8bb0a87130ff0838b4795: missing
+    svc-gateway    Landed     knot c1b85ff0
+      compatible-with:2841ccaab82a1e812dd8536a324462639596b1a5@066348e7f9e77f36e624a6281f2ca6d95a64e9910ad10d3427cf462bd8ca1708: missing
+
+METRICS
+  logitech  owner: arun@nool.dev  3/10 (+0 withdrawn)  30%  epics 0/6  $0.00  cycle 6m47s  span 8m52s
+    root  owner: arun@nool.dev  0/1 (+0 withdrawn)  0%  epics 0/0  $0.00 (unbound $0.00)  cycle -  span 0s
+    cloud  owner: arun@nool.dev  1/4 (+0 withdrawn)  25%  epics 0/3  $0.00  cycle 6m44s  span 8m51s
+    devices  owner: arun@nool.dev  1/4 (+0 withdrawn)  25%  epics 0/3  $0.00  cycle 6m44s  span 8m52s
+    platform  owner: arun@nool.dev  1/1 (+0 withdrawn)  100%  epics 0/0  $0.00  cycle 6m54s  span 6m54s

@@ -1,0 +1,49 @@
+Audit verdict (nool.audit.verify/v1)
+  Range     : (start) .. HEAD (15 knots, source: ledger)
+  Not scored: 1 refused seal(s), 0 refused push(es), quarantined: 0, unresolved ingest conflicts: 0
+      refused seal dbbda64d20dbff8…
+  Integrity : PASS (74 knots checked)
+
+Release authority: NOT_EVALUATED (1 release(s), 0 unauthorised)
+  0.2.0        8ce1b5e1ff6b537… by 39aa3ee8852f14d…: governance not declared
+
+PCI DSS 4.0.1 (pci-dss-4.0.1)
+  NOT_EVALUATED  pci-dss:3.3.1                Sensitive authentication data is not retained after authorization
+                 policy: 4 of 4 knot(s) did not pass; 066348e7f9e7: no landed policy claimed this control when this knot landed
+  NOT_EVALUATED  pci-dss:3.4.1                PAN is masked when displayed, with only the BIN and last four digits …
+                 policy: 4 of 4 knot(s) did not pass; 066348e7f9e7: no landed policy claimed this control when this knot landed
+  NOT_EVALUATED  pci-dss:3.5.1                PAN is rendered unreadable anywhere it is stored
+                 policy: 4 of 4 knot(s) did not pass; 066348e7f9e7: no landed policy claimed this control when this knot landed
+  NOT_EVALUATED  pci-dss:4.2.1                Strong cryptography and security protocols protect PAN during transmi…
+                 policy: 4 of 4 knot(s) did not pass; 066348e7f9e7: no landed policy claimed this control when this knot landed
+  NOT_EVALUATED  pci-dss:6.2.1                Bespoke and custom software are developed securely, with security vul…
+                 obligation:security-scan: 4 of 4 knot(s) did not pass; 066348e7f9e7: no [attestation.obligations] row named security-scan when this knot landed
+  NOT_EVALUATED  pci-dss:6.2.3                Bespoke and custom software is reviewed prior to being released into …
+                 independent_approval: 4 of 4 knot(s) did not pass; 066348e7f9e7: no [attestation] reviewer_keys were landed before this knot
+  NOT_EVALUATED  pci-dss:6.2.3.1              Manual code reviews are performed by individuals other than the origi…
+                 independent_approval: 4 of 4 knot(s) did not pass; 066348e7f9e7: no [attestation.obligations] row named human-approval when this knot landed
+  NOT_EVALUATED  pci-dss:6.2.4                Software engineering techniques prevent or mitigate common software a…
+                 policy: 4 of 4 knot(s) did not pass; 066348e7f9e7: no landed policy claimed this control when this knot landed
+  NOT_EVALUATED  pci-dss:6.3.1                Security vulnerabilities are identified and managed
+                 obligation:security-scan: 4 of 4 knot(s) did not pass; 066348e7f9e7: no [attestation.obligations] row named security-scan when this knot landed
+  NOT_EVALUATED  pci-dss:6.5.1                Changes to all system components in the production environment are ma…
+                 independent_approval: 4 of 4 knot(s) did not pass; 066348e7f9e7: no [attestation] reviewer_keys were landed before this knot
+  NOT_EVALUATED  pci-dss:6.5.5                Live PANs are not used in pre-production environments
+                 policy: 4 of 4 knot(s) did not pass; 066348e7f9e7: no landed policy claimed this control when this knot landed
+  NOT_EVALUATED  pci-dss:7.2.1                An access control model is defined and includes granting access based…
+                 authority_enforced: 4 of 4 knot(s) did not pass; 066348e7f9e7: governance was not declared when this knot landed
+  NOT_EVALUATED  pci-dss:7.2.2                Access is assigned to users based on job classification and function,…
+                 authority_enforced: 4 of 4 knot(s) did not pass; 066348e7f9e7: governance was not declared when this knot landed
+  NOT_EVALUATED  pci-dss:8.2.8                If a user session has been idle for more than 15 minutes, the user is…
+                 policy: 4 of 4 knot(s) did not pass; 066348e7f9e7: no landed policy claimed this control when this knot landed
+  NOT_EVALUATED  pci-dss:8.6.2                Passwords for application and system accounts are not hard coded in s…
+                 policy: 2 of 4 knot(s) did not pass; 0fd796af3060: no landed policy claimed this control when this knot landed
+  NOT_EVALUATED  pci-dss:11.5.2               A change-detection mechanism is deployed to alert personnel to unauth…
+                 policy_set_protected: 2 of 2 knot(s) did not pass; 0fd796af3060: the policy set was not pinned when this knot landed
+  (12 passed or out of scope; --all lists them)
+
+Summary: 3 pass, 0 fail, 16 not evaluated, 0 unverifiable, 0 not applicable, 9 out of scope
+Verdict: INCONCLUSIVE
+Next: `nool audit packs` shows which controls nothing claims. A control is evaluated once a landed policy claims it, an [attestation.obligations] row names its assertion, reviewer keys are landed, or the policy set is pinned (`nool config init-governance --write`, `nool admin plugin pin`).
+Signed by ed25519:39aa3ee8852f14d9edd9c286ce0a6ea6d507ae1b5c8f56bb9ff31b560544af4d as local
+Error: audit inconclusive: 16 control(s) not evaluated, 0 unverifiable, 3 passed

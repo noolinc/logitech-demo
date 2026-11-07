@@ -1,0 +1,38 @@
+# Semantic Changelog
+
+## Uncategorized
+- Synthesis: **5** operations  _2026-11-07 16:46:15 UTC_
+- Synthesis: **48** operations  _2026-11-07 16:46:34 UTC_
+- Attestation: **Pass** `syntax` by `integrity-driver` for `fee391f9`  _2026-11-07 16:46:35 UTC_
+- Grant     editor to 39aa3ee8  _2026-11-07 16:46:35 UTC_
+- Attestation: **Error** `unit-tests` by `integrity-driver` for `04110f5a`  _2026-11-07 16:46:35 UTC_
+- Attestation: **Error** `compile` by `integrity-driver` for `04110f5a`  _2026-11-07 16:46:35 UTC_
+- Attestation: **Error** `compile` by `integrity-driver` for `28321d06`  _2026-11-07 16:46:35 UTC_
+- Attestation: **Error** `unit-tests` by `integrity-driver` for `28321d06`  _2026-11-07 16:46:35 UTC_
+- Task: **Created** `accept TLV_BATTERY_HEALTH in ValidateTLVs + tests`  _2026-11-07 16:48:03 UTC_
+- Receipt   pre-solidify gate passed (3 policies) for 7450e932 (legacy: no destination)  _2026-11-07 16:48:03 UTC_
+- Task: **Picked**  _2026-11-07 16:54:18 UTC_
+- Receipt   pre-solidify gate passed (3 policies) for 6506fd23 (legacy: no destination)  _2026-11-07 16:54:18 UTC_
+- Task: **Started**  _2026-11-07 16:54:19 UTC_
+- Receipt   pre-solidify gate passed (3 policies) for 61bd0c64 (legacy: no destination)  _2026-11-07 16:54:19 UTC_
+- Attestation: **Error** `compile` by `integrity-driver` for `c1b85ff0`  _2026-11-07 16:54:35 UTC_
+- Attestation: **Error** `unit-tests` by `integrity-driver` for `c1b85ff0`  _2026-11-07 16:54:35 UTC_
+- Receipt   pre-solidify gate passed (3 policies) for c1b85ff0 (legacy: no destination)  _2026-11-07 16:54:35 UTC_
+- Task: **Finished** (landed `c1b85ff08acbab788d54f4e214bb4399c7c52dfd5650dd0885826f75ac62cf7f`)  _2026-11-07 16:54:47 UTC_
+- Receipt   pre-solidify gate passed (3 policies) for ffb4eace (legacy: no destination)  _2026-11-07 16:54:47 UTC_
+- Release: **0.2.0**  _2026-11-07 16:56:49 UTC_
+- Receipt   pre-solidify gate passed (3 policies) for bc22d60a (legacy: no destination)  _2026-11-07 16:56:49 UTC_
+- Receipt   pre-solidify gate passed (3 policies) for e0a7bca3 (legacy: no destination)  _2026-11-07 16:56:54 UTC_
+- Receipt   pre-solidify gate passed (3 policies) for b2763646 (legacy: no destination)  _2026-11-07 16:56:54 UTC_
+
+## main
+- **config** on `nool.toml`  _2026-11-07 16:46:34 UTC_
+- Synthesis: **4** operations  _2026-11-07 16:46:35 UTC_
+- **config** on `nool.toml`  _2026-11-07 16:46:35 UTC_
+- Synthesis: **3** operations  _2026-11-07 16:46:35 UTC_
+- Synthesis: **2** operations  _2026-11-07 16:54:35 UTC_
+
+## ship-battery-health-telemetry-end-to-end
+- Thread    ship-battery-health-telemetry-end-to-end created  _2026-11-07 16:56:54 UTC_
+- Task: **Created** `mirror TLV 0x11 in insights rollups`  _2026-11-07 16:56:54 UTC_
+

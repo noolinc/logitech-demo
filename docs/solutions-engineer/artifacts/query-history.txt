@@ -1,0 +1,2 @@
+include/logi/proto.h: "Battery-health telemetry: add TLV_BATTERY_HEALTH 0x11; headers extern-C-free per assertion 94195abf" — human, 2026-11-07, thread main [066348e7]
+include/logi/proto.h: "feat: initial import — platform/contracts skeleton, sim builds + tests green" — key adb4c942, 2026-11-07 [5e696600]

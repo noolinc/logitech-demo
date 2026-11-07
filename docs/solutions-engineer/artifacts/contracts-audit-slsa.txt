@@ -1,0 +1,25 @@
+Audit verdict (nool.audit.verify/v1)
+  Range     : (start) .. HEAD (15 knots, source: ledger)
+  Not scored: 1 refused seal(s), 0 refused push(es), quarantined: 0, unresolved ingest conflicts: 0
+      refused seal dbbda64d20dbff8…
+  Integrity : FAIL (74 knots checked)
+      parent_missing 13d6cff2cbfa8f9…: parent 5e696600e02868560e7d0aeb154104d0b6095961afe108fbab8892b593483656 is not in the history
+
+Release authority: NOT_EVALUATED (1 release(s), 0 unauthorised)
+  0.2.0        8ce1b5e1ff6b537… by 39aa3ee8852f14d…: governance not declared
+
+SLSA Source track 1.2 (slsa-source-v1.2)
+  FAIL           slsa-source:L1               Version controlled: use a version control system
+                 1 integrity failure(s); first: parent_missing on 13d6cff2cbfa
+  FAIL           slsa-source:L2               History and provenance: preserve change history and generate source p…
+                 1 integrity failure(s); first: parent_missing on 13d6cff2cbfa
+  UNVERIFIABLE   slsa-source:L3               Continuous technical controls: organizational technical controls are …
+                 authority_enforced: 4 of 4 knot(s) did not pass; 066348e7f9e7: ledger integrity failed, so this knot's evidence is not trusted
+  UNVERIFIABLE   slsa-source:L4               Two-party review: changes in protected branches are agreed to by two …
+                 independent_approval: 4 of 4 knot(s) did not pass; 066348e7f9e7: ledger integrity failed, so this knot's evidence is not trusted
+  (1 passed or out of scope; --all lists them)
+
+Summary: 0 pass, 2 fail, 0 not evaluated, 2 unverifiable, 0 not applicable, 1 out of scope
+Verdict: FAIL
+Signed by ed25519:39aa3ee8852f14d9edd9c286ce0a6ea6d507ae1b5c8f56bb9ff31b560544af4d as local
+Error: audit failed: 2 control(s) failed, 1 integrity failure(s)

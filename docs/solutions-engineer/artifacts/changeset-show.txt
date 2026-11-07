@@ -1,0 +1,7 @@
+CHANGE SET
+  changeset:8da82312c254d981  Open  Battery-health telemetry: report pack cycles and temperature over the 2.4GHz link (TLV 0x11, additive to proto v2)
+    contracts      Attested   knot 066348e7
+    mouse-fw       Landed     knot 8d5123f9
+      compatible-with:da861305c27ac4b78a70b8de6b743a3500658909@a4f0c2563bbf37005db4a9fe894a2ed829271f4a96a8bb0a87130ff0838b4795: missing
+    svc-gateway    Landed     knot c1b85ff0
+      compatible-with:2841ccaab82a1e812dd8536a324462639596b1a5@066348e7f9e77f36e624a6281f2ca6d95a64e9910ad10d3427cf462bd8ca1708: missing

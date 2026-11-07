@@ -1,0 +1,150 @@
+# Nool workspace configuration
+#
+# Declares the fractal coordination topology for a polyglot workspace of
+# nested Nool projects (Org → Dept → Team → Project). Read by every
+# `nool workspace <subcommand>`. Unlike a [workspace] section inside
+# nool.toml — which NoolConfig silently drops on round-trip — this file is
+# the durable home for workspace declarations and is never rewritten by Nool.
+#
+# Tips:
+#   - Discovery is convention-based: any directory containing a `.nool/` is
+#     treated as a project automatically. You only need [workspace.projects]
+#     entries to OVERRIDE convention (custom path/lang/release driver/remote/
+#     branch) — discovered projects below are pre-populated as a starting point.
+#   - Run `nool workspace doctor` after editing to catch stale declarations,
+#     dangling edges, or dependency cycles.
+#   - Run `nool workspace status` / `nool workspace visualize` to see how
+#     these declarations reconcile against what's actually on disk.
+
+# Org — Logitech (research sim). Owner = workspace authority; the default
+# agent identity inherits downward unless a project declares its own.
+[workspace]
+owner = "arun@nool.dev"
+
+# Discovered projects — adjust lang/release/remote/branch as needed:
+[workspace.projects.svc-gateway]
+path = "cloud/svc-gateway"
+lang = "go"
+release = "auto"
+# release = "cargo"  # release driver override (cargo, npm, vercel, ...)
+# remote = "origin"  # sync remote for `nool workspace pull` (default: origin)
+# branch = "main"      # tracking branch surfaced in `workspace status` (default: main)
+
+[workspace.projects.svc-insights]
+path = "cloud/svc-insights"
+lang = "go"
+release = "auto"
+# release = "cargo"  # release driver override (cargo, npm, vercel, ...)
+# remote = "origin"  # sync remote for `nool workspace pull` (default: origin)
+# branch = "main"      # tracking branch surfaced in `workspace status` (default: main)
+
+[workspace.projects.svc-ota]
+path = "cloud/svc-ota"
+lang = "go"
+release = "auto"
+# release = "cargo"  # release driver override (cargo, npm, vercel, ...)
+# remote = "origin"  # sync remote for `nool workspace pull` (default: origin)
+# branch = "main"      # tracking branch surfaced in `workspace status` (default: main)
+
+[workspace.projects.keyboard-fw]
+path = "devices/keyboard-fw"
+lang = "c"
+release = "auto"
+# release = "cargo"  # release driver override (cargo, npm, vercel, ...)
+# remote = "origin"  # sync remote for `nool workspace pull` (default: origin)
+# branch = "main"      # tracking branch surfaced in `workspace status` (default: main)
+
+[workspace.projects.mouse-fw]
+path = "devices/mouse-fw"
+lang = "c"
+release = "auto"
+# release = "cargo"  # release driver override (cargo, npm, vercel, ...)
+# remote = "origin"  # sync remote for `nool workspace pull` (default: origin)
+# branch = "main"      # tracking branch surfaced in `workspace status` (default: main)
+
+[workspace.projects.receiver-fw]
+path = "devices/receiver-fw"
+lang = "c"
+release = "auto"
+# release = "cargo"  # release driver override (cargo, npm, vercel, ...)
+# remote = "origin"  # sync remote for `nool workspace pull` (default: origin)
+# branch = "main"      # tracking branch surfaced in `workspace status` (default: main)
+
+[workspace.projects.contracts]
+path = "platform/contracts"
+lang = "c"
+release = "auto"
+# release = "cargo"  # release driver override (cargo, npm, vercel, ...)
+# remote = "origin"  # sync remote for `nool workspace pull` (default: origin)
+# branch = "main"      # tracking branch surfaced in `workspace status` (default: main)
+
+[workspace.projects.hal-core]
+path = "platform/hal-core"
+lang = "c"
+release = "auto"
+# release = "cargo"  # release driver override (cargo, npm, vercel, ...)
+# remote = "origin"  # sync remote for `nool workspace pull` (default: origin)
+# branch = "main"      # tracking branch surfaced in `workspace status` (default: main)
+
+[workspace.projects.mcu-protocol]
+path = "platform/mcu-protocol"
+lang = "c"
+release = "auto"
+# release = "cargo"  # release driver override (cargo, npm, vercel, ...)
+# remote = "origin"  # sync remote for `nool workspace pull` (default: origin)
+# branch = "main"      # tracking branch surfaced in `workspace status` (default: main)
+
+# Dependency edges gate build/release/contract order across projects.
+# `from` depends `on` another project; `kind` controls how it gates:
+#   build    — `from` must be built after `on`
+#   release  — `from` must not release until `on` has released (default)
+#   contract — shared schema/API contract spanning the two projects
+#
+# [[workspace.depends]]
+# from = "agent-vision"
+# on = "nool"
+# kind = "release"
+
+
+# Dependency edges — declared cross-repo coupling
+# Firmware group consumes the protocol lib and the contracts header.
+[[workspace.depends]]
+from = "mouse-fw"
+on = "mcu-protocol"
+kind = "build"
+
+[[workspace.depends]]
+from = "keyboard-fw"
+on = "mcu-protocol"
+kind = "build"
+
+[[workspace.depends]]
+from = "receiver-fw"
+on = "mcu-protocol"
+kind = "build"
+
+[[workspace.depends]]
+from = "mcu-protocol"
+on = "contracts"
+kind = "contract"
+
+[[workspace.depends]]
+from = "hal-core"
+on = "contracts"
+kind = "build"
+
+# Cloud services consume the same TLV contract.
+[[workspace.depends]]
+from = "svc-gateway"
+on = "contracts"
+kind = "contract"
+
+[[workspace.depends]]
+from = "svc-ota"
+on = "mouse-fw"
+kind = "release"
+
+[[workspace.depends]]
+from = "svc-insights"
+on = "svc-gateway"
+kind = "build"

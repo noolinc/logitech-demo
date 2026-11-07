@@ -1,0 +1,19 @@
+  [Blast] Resolved path 'include/logi/proto.h' to latest knot 066348e7
+Semantic Blast Radius Topology
+══════════════════════════════════════════════════
+Targets        : 1 knot(s)
+Volume         : 0 descendant knot(s)
+Boundary Map   : Impact: Boundary(README.md) ∩ Hull(None)
+Dependents     : 1 file(s) via entity graph: README.md
+                 (10 later knot(s) touch nothing this change reaches and are not counted)
+
+Symbol Reachability (in-memory graph, 2 node(s)/2 edge(s)):
+  Affected via Uses/DependsOn/Imports: 1 (4µs query)
+
+Risk Score: 15/100
+✅ LOW RISK: 1 dependent file(s), listed above; no wider intersection.
+
+Semantic Field (graph calculus):
+  Spectral impact   : 1.0000  (structural centrality among 3 nodes)
+  Heat diffusion    : reaches 2 node(s), peak neighbor 0.2589
+  Modularity (λ₂)   : 1.0000  (well-modularized)
