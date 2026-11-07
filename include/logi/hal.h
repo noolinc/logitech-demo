@@ -7,10 +7,6 @@
 #ifndef LOGI_HAL_H
 #define LOGI_HAL_H
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
@@ -70,7 +66,4 @@ uint8_t hal_radio_last_len(void);
 unsigned hal_radio_tx_count(void);
 void hal_radio_reset(void);
 
-#ifdef __cplusplus
-}
-#endif
 #endif /* LOGI_HAL_H */
