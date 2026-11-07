@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.logitech.dev/research/device-event.schema.json",
+  "title": "Logi Wheel device telemetry event (cloud-facing contract)",
+  "description": "Wire envelope emitted by device firmware, received by svc-gateway.",
+  "type": "object",
+  "required": ["deviceId", "deviceType", "protoVer", "seq", "tlvs"],
+  "properties": {
+    "deviceId": { "type": "string", "pattern": "^LOGI-[0-9A-F]{4}$" },
+    "deviceType": { "enum": ["mouse", "keyboard", "receiver", "webcam", "rallybar"] },
+    "protoVer": { "type": "integer", "minimum": 1, "maximum": 2, "description": "LOGI_PROTO_VERSION mirror; <= LOGI_PROTO_VERSION" },
+    "seq": { "type": "integer", "minimum": 0, "maximum": 255 },
+    "firmwareVersion": { "type": "string" },
+    "tlvs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type"],
+        "properties": {
+          "type": { "type": "integer", "description": "TLV id, mirror of enum logi_tlv_type in proto.h" },
+          "len": { "type": "integer" },
+          "value": { "type": "string", "contentEncoding": "base64", "description": "TLV value bytes base64" }
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}
