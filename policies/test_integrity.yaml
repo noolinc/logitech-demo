@@ -1,0 +1,23 @@
+- inv_id: POL-TESTS-001
+  title: Tests are not deleted
+  scope:
+    type: global
+  kind: structural
+  severity: high
+  mode: blocking
+  reason_code: 403
+  when:
+    semantic_path_is_test: true
+  forbids:
+    - mutation_kind_is: delete
+- inv_id: POL-TESTS-002
+  title: Tests are not skipped
+  scope:
+    type: global
+  kind: structural
+  severity: medium
+  mode: warning
+  when:
+    semantic_path_is_test: true
+  forbids:
+    - diff_matches: "@pytest\\.mark\\.skip|#\\[ignore\\]|\\bt\\.Skip(Now|f)?\\(|\\b(it|describe|test)\\.skip\\(|\\bx(it|describe)\\("
