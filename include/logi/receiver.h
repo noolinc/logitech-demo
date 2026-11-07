@@ -2,10 +2,6 @@
 #ifndef LOGI_RECEIVER_H
 #define LOGI_RECEIVER_H
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #include <stdbool.h>
 #include <stdint.h>
 
@@ -22,7 +18,4 @@ logi_rx_state_t rx_pairing_advance(logi_rx_state_t s, bool pair_frame);
 /* Validate + forward one raw radio frame as a host HID event. */
 bool rx_forward(const uint8_t *raw, uint8_t n, uint8_t *hid_bytes_out);
 
-#ifdef __cplusplus
-}
-#endif
 #endif /* LOGI_RECEIVER_H */
