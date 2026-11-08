@@ -11,7 +11,7 @@ Kit contents:
 |---|---|
 | [`01-demo-script.md`](01-demo-script.md) | The 20-minute live demo, minute by minute, with exact commands and expected output |
 | [`02-audience-playbook.md`](02-audience-playbook.md) | Who sits across the table, what each persona cares about, the opening line for each |
-| [`03-objection-handling.md`](03-objection-handling.md) | Prepared answers to the pushback (git flow inertia, parser false positives, toolchains/HIL, GitLab, token costs) |
+| [`03-objection-handling.md`](03-objection-handling.md) | Prepared answers to the pushback (git flow inertia, parser false positives, toolchains/HIL, GitLab, token costs) + the 3-minute rebuttal round and the incumbent-landscape annex with the composition posture |
 | [`04-environment-prep.md`](04-environment-prep.md) | Machine checklist before you walk in; what to pre-wire; fallback plan |
 | [`05-metrics-and-roi.md`](05-metrics-and-roi.md) | The numbers story: NPI framing, token telemetry, capacity math |
 | [`06-exec-rebuttals-evidence.md`](06-exec-rebuttals-evidence.md) | Rebuttals to the executive hot-read, each backed by evidence generated this week (9/9 replay proof, gate stats, bypass answers) |

@@ -149,6 +149,65 @@ the only one where the product is the hero without you defending it.
 
 ---
 
+## Annex — Incumbent landscape & the composition posture
+
+For the hardest version of "why buy this": aren't GitHub, GitLab, Sigstore,
+OPA, Drata, Polarion already selling pieces of this? They are. Lead by
+conceding that out loud — then show every incumbent holds **one primitive**,
+and the gaps between them are exactly where agent-era failures land.
+
+### The primitive map
+
+| Primitive | Incumbent that owns it | What's left uncovered |
+|---|---|---|
+| Signed append-only log (artifact provenance) | Sigstore Rekor / in-toto / GitHub attestations | Build artifacts only — no intent, identity, leases, or "why"; never paces a work force |
+| Policy-as-code refuse-at-push | OPA / Gatekeeper / Sentinel · GitLab compliance pipelines | Evaluates ON the PR, after work; single-repo worldview |
+| Contention control (after work) | GitHub/GitLab merge queues; Trunk | Serialization happens at merge; the work is already spent |
+| Contention control (before work) | Perforce exclusive checkouts (decades old) | The industry walked away because human rebase cost was cheap; with agents the cost is a burned session — the trade inverted, and the incumbent slept on it |
+| Cross-repo change object | — none — | Monorepos dodge it; Jira epics are to-do lists, not landing state machines with pins |
+| Process evidence / RTM | Polarion / DOORS / Jama | System of record upstream; documentary, retrospective, human-curated — nothing at the change edge |
+| Continuous compliance evidence | Drata / Vanta | Collects from existing tool logs; assumes change records already exist |
+| Agent guardrails | Claude Code hooks · Copilot Control System · sandboxes (E2B…) | Per-tool, per-sandbox; identity of the TOOL, not the actor; no cross-tool ledger or spend attribution |
+
+### Concessions to volunteer (say these before they do)
+
+- "If your org is human-paced and single-repo, don't buy this — merge queues,
+  branch protection, and a compliance subscription already close the loop."
+- "Sigstore proved the model; the ledger applies it to the change layer."
+- "Perforce solved checkout locking decades ago — and it under-served the
+  market because human rebase was cheap. Agents changed the economics."
+
+### The composition posture
+
+Nool replaces none of it:
+
+| Layer | Owner | Unchanged? |
+|---|---|---|
+| Requirements system of record | Polarion / DOORS / Jama | upstream, untouched |
+| Certified analyzers / scanners | Polyspace · QAC · SAST | the instrument layer, untouched |
+| Provenance / transparency logs | Sigstore Rekor | can mirror or coexist |
+| Policy-as-code at PR | OPA | still runs; nool adds the pre-work fence |
+| The connective tissue between them | **Nool** | actor identity, cross-repo leases, intent binding, per-actor attestations, spend attribution, pin discharge |
+
+Positioning line: "We don't replace your CI, your Sigstore, or your Polarion.
+We're the layer between the actor that starts work and the system of record
+that swallows it. Every incumbent above answers 'did this artifact pass?' We
+answer 'who did this, to what purpose, under what fence, at what cost — and
+can you prove it in two years?'"
+
+### The question that ends the debate
+
+"**How does any of your incumbent tooling know that the Claude session editing
+`proto.h` is the same actor as the commit authored into main?**"
+
+Answer everywhere except nool: it doesn't. Incumbents trust merge-time
+identity; agent workflows break that trust (shared machines, keys, service
+accounts). The hole never existed in their stack until now — which is why the
+layer doesn't exist as a product yet. Deliver this question last, quietly,
+and let it sit on the table.
+
+---
+
 **Delivery rule:** every objection gets a receipt (knot id, demo minute, or
 artifact file) inside 60 seconds, then one question back. Objection-handling
 without return-fire becomes a debate instead of a discovery.
