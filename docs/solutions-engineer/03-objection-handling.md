@@ -83,6 +83,72 @@ front of your auditor instead of a week of archaeology."
 
 ---
 
+## The 3-minute rebuttal round (verbal rehearsal cut)
+
+For when the executive pushback arrives all at once — the full evidence for
+every beat is generated and on file in
+[`06-exec-rebuttals-evidence.md`](06-exec-rebuttals-evidence.md). Spoken
+language, ~450 words, each beat timed.
+
+**[0:00 — setup, 15 s]**
+"You asked what happens if someone just works around this. Fair. During this
+build, that exact question got answered three different ways, and I'd rather
+show you the receipts than argue the theory."
+
+**[0:15 — 'they'll git commit around it', 45 s]**
+"Say a dev types `git commit` on main, pushes, bypasses everything. Nothing
+blocks their keystroke — we don't stealth-patch your git. What happens is
+that landing is *history without a signature*. One command — `bridge adopt` —
+and it enters the ledger tagged `nool:foreign`, so when you audit later, the
+question 'who landed around the process?' is answered by the DAG itself,
+permanently. And for agents, that lane doesn't exist: the hook renews a live
+fence on every file the agent touches. No session, no landing, no debate."
+
+**[1:00 — 'we could build this ourselves', 45 s]**
+"You could build the demo. Here's what you'd be signing up to replicate —
+this week, this tool's audit **refused its own history**. Twice. Contracts
+had a broken chain: the export said FAIL, the fix took one command,
+twenty-three issues healed. Mouse firmware: eighty-two knots checked,
+thirty-eight fixed on the spot. A lock service you code in a sprint won't
+fail closed on its own integrity — it will happily keep serving a corrupted
+history. The product's most embarrassing moments are its best reference."
+
+**[1:45 — 'PCI for a mouse?', 30 s]**
+"The frameworks aren't baked in — they're a loadout. We run SLSA source
+because that's what fits a firmware supply chain, and the only controls that
+get assessed are the ones a landed policy claims. Drop the claim, the control
+leaves the audit. It's config, not architecture."
+
+**[2:15 — 'it's a demo toy', 30 s]**
+"On portability: every node in this workspace replayed its full chain of
+custody through a round trip — push, fresh clone, pull, verify — nine out of
+nine, zero integrity failures, all signed. Your evidence is reproducible from
+a clone, on someone else's machine, a year from now. That's not a laptop demo
+anymore."
+*⚠ If pressed on the caveat: "One honest wart — that result needs one origin
+per repo, which is how production runs. Jamming nine repos as branches onto
+one remote trips a bug we've filed. Finding 5501aba4, receipt in
+`artifacts/fresh-clone-replay.txt`."*
+
+**[2:45 — 'token math', 15 s]**
+"And on spend: no providers, no fake numbers. What's live is the refusal
+meter — one proposal physically stopped by another agent's fence.
+Milliseconds, zero tokens burned, receipt in the ledger. The trend comes from
+your pilot, not my slides."
+
+**[3:00 — the close]**
+"That's the rebuttal round. Now the question back — the one from the start:
+your last cross-repo protocol change. Who tracked the ripple, and how long
+until they were sure?"
+*…and be quiet.*
+
+**Three moments sell this script and none of them are features** — the audit
+refusing to lie (twice), the bypass being tagged instead of blocked, and the
+silence after your question. If you only land one, land the audit story; it's
+the only one where the product is the hero without you defending it.
+
+---
+
 **Delivery rule:** every objection gets a receipt (knot id, demo minute, or
 artifact file) inside 60 seconds, then one question back. Objection-handling
 without return-fire becomes a debate instead of a discovery.
