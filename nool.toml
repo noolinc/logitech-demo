@@ -16,6 +16,7 @@ use_host_repo = true
 transport = "git"
 max_push_blob_bytes = 104857600
 foreign_commits = "report"
+format = 2
 
 [governance]
 
