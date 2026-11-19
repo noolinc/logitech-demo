@@ -1,0 +1,35 @@
+name: t8-depth1
+on:
+  push:
+    branches: [t8/depth1]
+jobs:
+  carriers:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: HEAD-only access to the knot carriers
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse --is-shallow-repository)" = true
+          test "$(git rev-list --count HEAD)" = 1
+          grep -q '^format = 2' nool.toml
+          ls -l .nool/carriers/
+          n=0
+          for f in .nool/carriers/*.knot; do
+            id=$(basename "$f" .knot)
+            magic=$(head -c 6 "$f")
+            ver=$(head -c 7 "$f" | tail -c 1 | od -An -tu1 | tr -d ' ')
+            embedded=$(head -c 39 "$f" | tail -c 32 | od -An -tx1 | tr -d ' \n')
+            echo "$id magic=$magic version=$ver embedded=$embedded"
+            test "$magic" = NOOLC2
+            test "$embedded" = "$id"
+            n=$((n+1))
+          done
+          test "$n" -ge 1
+          trailer=$(git log -1 --format=%B | sed -n 's/^Nool-Knot-ID: //p')
+          echo "HEAD trailer: $trailer"
+          test -f ".nool/carriers/$trailer.knot"
+          echo "OK: $n carrier(s) readable from a depth-1 checkout; HEAD's knot carrier present"
+
